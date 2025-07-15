@@ -62,7 +62,6 @@ const Hero = () => {
             </h1>
             
             <div className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-6 min-h-[40px]">
-              <span>Aspiring </span>
               <span className="gradient-text font-semibold">
                 {currentText}
                 <span className="animate-pulse">|</span>

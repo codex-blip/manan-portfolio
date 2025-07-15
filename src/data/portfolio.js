@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Manan Kumar",
-  title: "Aspiring Full-Stack Developer",
+  title: "Full-Stack Developer",
   subtitle: "Tech Enthusiast | Code & Creativity",
   email: "kumarmanan106@gmail.com",
   phone: "+91 9876543210",
@@ -75,6 +75,12 @@ export const skills = [
     level: "Intermediate",
     icon: "📊",
     color: "bg-teal-500"
+  },
+  {
+    name: "Next.js",
+    level: "Intermediate",
+    icon: "⚡",
+    color: "bg-gray-900"
   }
 ]
 
