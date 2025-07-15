@@ -29,11 +29,32 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   ]
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    const targetId = href.substring(1) // Remove the # from href
+    
+    // Close mobile menu first
     setIsOpen(false)
+    
+    // Add small delay to let mobile menu close, then scroll
+    setTimeout(() => {
+      const element = document.getElementById(targetId)
+      if (element) {
+        // Get the actual navbar height dynamically
+        const navbar = document.querySelector('nav')
+        const navbarHeight = navbar ? navbar.offsetHeight : 64
+        
+        // Add some extra offset for mobile to ensure content is visible
+        const extraOffset = window.innerWidth < 768 ? 20 : 0
+        const totalOffset = navbarHeight + extraOffset
+        
+        const elementPosition = element.offsetTop
+        const offsetPosition = elementPosition - totalOffset
+        
+        window.scrollTo({
+          top: Math.max(0, offsetPosition), // Ensure we don't scroll to negative position
+          behavior: 'smooth'
+        })
+      }
+    }, window.innerWidth < 768 ? 100 : 0) // Small delay only on mobile
   }
 
   return (
