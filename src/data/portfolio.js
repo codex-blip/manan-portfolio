@@ -81,6 +81,12 @@ export const skills = [
     level: "Intermediate",
     icon: "⚡",
     color: "bg-gray-900"
+  },
+  {
+    name: "FastAPI",
+    level: "intermediate",
+    icon: "🚀",
+    color: "bg-cyan-500"
   }
 ]
 
@@ -145,5 +151,14 @@ export const achievements = [
     stats: "Mentor",
     date: "2024",
     color: "bg-green-500"
+  },
+  {
+    id: 4,
+    title: "Co-Head, Advitiya",
+    description: "Event Co-Head of the Tech Fest at IIT Ropar",
+    icon: "🎉",
+    stats: "Co-Head",
+    date: "2025",
+    color: "bg-yellow-500"
   }
 ]
